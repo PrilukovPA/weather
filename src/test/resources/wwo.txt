@@ -1,0 +1,43 @@
+{
+	"data": {
+		"request": [
+			{
+				"type": "City",
+				"query": "Ekaterinburg, Russia"
+			}
+		],
+		"current_condition": [
+			{
+				"observation_time": "05:59 PM",
+				"temp_C": "18",
+				"temp_F": "64",
+				"weatherCode": "113",
+				"weatherIconUrl": [
+					{
+						"value": "http://cdn.worldweatheronline.net/images/wsymbols01_png_64/wsymbol_0008_clear_sky_night.png"
+					}
+				],
+				"weatherDesc": [
+					{
+						"value": "Clear"
+					}
+				],
+				"windspeedMiles": "7",
+				"windspeedKmph": "11",
+				"winddirDegree": "280",
+				"winddir16Point": "W",
+				"precipMM": "0.0",
+				"precipInches": "0.0",
+				"humidity": "64",
+				"visibility": "10",
+				"visibilityMiles": "6",
+				"pressure": "1016",
+				"pressureInches": "30",
+				"cloudcover": "0",
+				"FeelsLikeC": "18",
+				"FeelsLikeF": "64",
+				"uvIndex": 0
+			}
+		]
+	}
+}

@@ -1,0 +1,29 @@
+<configuration
+    xmlns="http://ch.qos.logback/xml/ns/logback"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://ch.qos.logback/xml/ns/logback 
+    					https://raw.githubusercontent.com/enricopulatzo/logback-XSD/master/src/main/xsd/logback.xsd"
+    debug="false">
+ 
+	<appender name="stdout" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} %-5level %M: - %msg%n</pattern>
+		</encoder>
+	</appender>
+	
+	<appender name="file" class="ch.qos.logback.core.FileAppender">
+        <file>weather.log</file>
+        <append>true</append>
+        <encoder>            
+			<pattern>%d{HH:mm:ss.SSS} [thread: %thread] %-5level %M: %msg%n</pattern>
+        </encoder>
+    </appender>
+     
+    <logger name="ru.evenx.logback" level="info">     
+        <appender-ref ref="file" /> 
+    </logger> 
+	
+	<root level="debug">
+		<appender-ref ref="stdout" />
+    </root>     
+</configuration>
