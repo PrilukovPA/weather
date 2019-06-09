@@ -59,7 +59,8 @@ public class WeatherServiceHelper {
 			 ResultSet rs = stmt.executeQuery("SELECT c.id, c.name FROM city c")) {
 			
 			while(rs.next()) {
-				retVal.put(rs.getString("id"), rs.getString("name"));
+				String utf8 = new String(rs.getString("name").getBytes(), "UTF-8");
+				retVal.put(rs.getString("id"), utf8);
 			}
 			
 		} catch (Exception e) {
@@ -78,7 +79,7 @@ public class WeatherServiceHelper {
 	/**
 	 * Запрос названия города по id
 	 */
-	public String getCityName(int id) {
+	public String getCityName(int id) {		
 		return getCityList().get(String.valueOf(id));
 	}
 	
