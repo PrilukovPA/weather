@@ -28,7 +28,7 @@ public class LoginController {
 	/**
 	 * Главная страница
 	 */
-	@RequestMapping(value = "/", method = RequestMethod.GET)
+	@RequestMapping(value = "/", method = RequestMethod.GET, produces = { "text/html; charset=UTF-8" })
 	public ModelAndView main(HttpServletRequest request) {		
 		Settings settings = new Settings();
 		return new ModelAndView("main", "settings", settings);
@@ -37,7 +37,7 @@ public class LoginController {
 	/**
 	 * Страница текущей погоды
 	 */
-	@RequestMapping(value = "/current", method = RequestMethod.POST)
+	@RequestMapping(value = "/current", method = RequestMethod.POST, produces = { "text/html; charset=UTF-8" })
 	public ModelAndView current(@ModelAttribute("settings") Settings settings) {		
 		WeatherInfo service = helper.getWeatherInfo(settings);
 		if (service != null) {
